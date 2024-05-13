@@ -7,6 +7,9 @@ This module is an introduction to the Vercel AI SDK.
 - [Takeoff](https://JoinTakeoff.com)
 - [Vercel AI SDK Docs](https://sdk.vercel.ai/docs/introduction)
 - [Vercel AI SDK Next.js Quickstart](https://sdk.vercel.ai/docs/getting-started/nextjs-app-router)
+- [Next.js Docs](https://nextjs.org/docs)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/installation)
+- [Shadcn Docs](https://ui.shadcn.com/docs)
 
 ## Recommendations
 
@@ -18,7 +21,7 @@ You will need an OpenAI API Key.
 
 Get one [here](https://platform.openai.com/api-keys).
 
-Copy the `.env.example` file to `.env.local`.
+Copy the `.env.example` file to a `.env.local`.
 
 ```bash
 cp .env.example .env.local
