@@ -24,8 +24,8 @@ export async function streamGeneration(input: string) {
       prompt: input
     });
 
-    for await (const delta of textStream) {
-      stream.update(delta);
+    for await (const token of textStream) {
+      stream.update(token);
     }
 
     stream.done();

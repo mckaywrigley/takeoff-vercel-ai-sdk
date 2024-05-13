@@ -28,8 +28,8 @@ export default function GenerateText() {
 
           // FOR STREAMING
           const { output } = await streamGeneration(inputValue);
-          for await (const delta of readStreamableValue(output)) {
-            setGeneration((currentGeneration) => `${currentGeneration}${delta}`);
+          for await (const token of readStreamableValue(output)) {
+            setGeneration((currentGeneration) => `${currentGeneration}${token}`);
           }
         }}
       >
