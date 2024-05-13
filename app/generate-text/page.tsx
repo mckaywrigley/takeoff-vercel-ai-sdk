@@ -2,8 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { readStreamableValue } from "ai/rsc";
 import { useState } from "react";
-import { getAnswer } from "./actions";
+import { streamGeneration } from "./actions";
 
 export default function GenerateText() {
   const [generation, setGeneration] = useState<string>("");
@@ -21,8 +22,15 @@ export default function GenerateText() {
       <Button
         className="mt-4"
         onClick={async () => {
-          const { text } = await getAnswer(inputValue);
-          setGeneration(text);
+          // FOR GENERATIONS
+          // const { text } = await getGeneration(inputValue);
+          // setGeneration(text);
+
+          // FOR STREAMING
+          const { output } = await streamGeneration("Why is the sky blue?");
+          for await (const delta of readStreamableValue(output)) {
+            setGeneration((currentGeneration) => `${currentGeneration}${delta}`);
+          }
         }}
       >
         Generate
