@@ -1,4 +1,4 @@
-# Takeoff: Vercel AI SDK - Basic
+# Takeoff: Vercel AI SDK
 
 This module is an introduction to the Vercel AI SDK.
 
